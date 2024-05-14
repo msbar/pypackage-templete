@@ -1,1 +1,23 @@
 site_name: Treinamento Python
+
+theme:
+  name: "material"
+  language: pt-BR
+  features:
+    - content.code.copy
+
+nav:
+  - Descrição: index.md
+  
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - mkdocstrings
