@@ -1,0 +1,89 @@
+[build-system]
+requires = ["setuptools>=61.0" , "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[project]
+name = "package_YOUR_USERNAME_HERE"
+version = "1.0.0"
+authors = [
+  { name="Seu nome", email="seu email" }
+]
+description = "Projeto python base"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = [
+  "pandas",
+  "tools",
+  "asyncio",
+  "tipologias",
+]
+dependencies = [
+  'pandas==2.2.2',
+  'pypdtools==0.0.5',
+]
+
+[project.scripts]
+main = "package_YOUR_USERNAME_HERE.main:main"
+
+
+[project.optional-dependencies]
+tests = [
+  'black==24.4.2',
+  'isort==5.13.2',
+  'pytest==8.2.0',
+]
+docs = [
+  'mkdocs==1.6.0',
+  'mkdocs-material==9.5.22',
+  'mkdocstrings==0.25.1',
+  'mkdocstrings-python==1.10.0',
+  'pymdown-extensions==10.8.1',
+]
+
+[project.urls]
+"source" = "http://Git/cieg/projeto_padrao_python.git"
+
+[tool.black]
+line-length = 119
+target-version = ['py37']
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | foo.py           # also separately exclude a file named foo.py in
+                     # the root of the project
+)
+'''
+
+[tool.isort]
+profile = "black"
+skip_glob = ["docs/*"]
+multi_line_output = 3
+
+[tool.flake8]
+ignore = ['E231', 'E241']
+per-file-ignores = [
+    '__init__.py:F401',
+]
+max-line-length = 119
+count = true
