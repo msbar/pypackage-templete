@@ -6,10 +6,10 @@ build-backend = "setuptools.build_meta"
 include-package-data = true
 
 [project]
-name = "package_YOUR_USERNAME_HERE"
+name = "package"
 version = "1.0.0"
 authors = [
-  { name="Seu nome", email="seu email" }
+  { name="Marciel Barcellos", email="marciel.barcellos@tcmrio.tc.br" }
 ]
 description = "Projeto python base"
 readme = "README.md"
@@ -26,17 +26,21 @@ keywords = [
   "tipologias",
 ]
 dependencies = [
+  'cryptography==42.0.7',
   'pandas==2.2.2',
   'pypdtools==0.0.5',
+  'pyodbc==5.1.0',
+  'python-decouple==3.8',
+  'SQLAlchemy==2.0.30',
 ]
 
 [project.scripts]
-main = "package_YOUR_USERNAME_HERE.main:main"
-
+package = "package.apps.cli.cli:main"
 
 [project.optional-dependencies]
 tests = [
   'black==24.4.2',
+  'flake8==7.0.0',
   'isort==5.13.2',
   'pytest==8.2.0',
 ]

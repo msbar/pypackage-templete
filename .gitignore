@@ -141,6 +141,10 @@ migrations/
 # logs
 logs/
 *.log
-data/
 token.json
 google_api_credentials.json
+
+#Projeto
+datafiles/
+token.crypton
+nb_test.ipynb
