@@ -5,9 +5,10 @@ from package.services.criptografia.crypton import Crypton
 
 class Crypt(BaseCommand):
     """Executa o crypton."""
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.gerenate_key()            
+        self.gerenate_key()
         self.crypton = Crypton(Crypton.read_token_file(CRYPTON_TOKEN_PATH))
 
     def gerenate_key(self):

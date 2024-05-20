@@ -1,0 +1,22 @@
+# Template para o arquivo .env
+
+O arquivo `.env` é um arquivo de configuração que contém as variáveis de ambiente necessárias para a execução do projeto. Ele é utilizado para armazenar informações sensíveis, como senhas e chaves de acesso, de forma segura.
+
+```python
+DOTENV_TEMPLATE = """
+DB_HOST_CIEG_DEV=TCMBD2\\ETL
+DB_NAME_CIEG_DEV=CIEG_DEV
+DB_USER_CIEG_DEV=
+DB_PASSWORD_CIEG_DEV=
+
+DB_HOST_BIG_DATA_CIEG=TCMBD2\\ETL
+DB_NAME_BIG_DATA_CIEG=BIG_DATA_CIEG
+DB_USER_BIG_DATA_CIEG=
+DB_PASSWORD_BIG_DATA_CIEG=
+
+DB_HOST_TRILHAS_AUDITORIA=TCMBD2\\ETL
+DB_NAME_TRILHAS_AUDITORIA=TRILHAS_AUDITORIA
+DB_USER_TRILHAS_AUDITORIA=
+DB_PASSWORD_TRILHAS_AUDITORIA=
+"""
+```

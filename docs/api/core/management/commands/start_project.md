@@ -1,0 +1,1 @@
+::: package.core.management.commands.start_project

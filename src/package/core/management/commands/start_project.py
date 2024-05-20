@@ -7,7 +7,7 @@ from package.conf.settings import (
     DOTENV_PATH,
     LOGS_PATH,
 )
-from package.conf.templates.dot_env_template import DOTENV_TEMPLATE
+from package.conf.templates.dotenv_template import DOTENV_TEMPLATE
 from package.core.management.base import BaseCommand
 from package.services.criptografia.crypton import Crypton
 
@@ -25,7 +25,7 @@ class StartProject(BaseCommand):
         stream_handler.setFormatter(logging.Formatter(handler_formatter))
 
         # Adiciona um rotating file handler para logar em arquivo.
-        file_handler = RotatingFileHandler(LOGS_PATH / 'package.log', maxBytes=10*1024*1024, backupCount=5)
+        file_handler = RotatingFileHandler(LOGS_PATH / "package.log", maxBytes=10 * 1024 * 1024, backupCount=5)
         file_handler.setLevel(logging.INFO)
         file_handler.setFormatter(logging.Formatter(handler_formatter))
 
@@ -42,13 +42,13 @@ class StartProject(BaseCommand):
         if DOTENV_PATH.exists():
             return
         with open(DOTENV_PATH, "w") as f:
-            f.write(DOTENV_TEMPLATE)
+            f.write(DOTENV_TEMPLATE.strip())
 
     def create_datafiles(self):
         """Cria a pasta datafiles."""
         if not DATAFILES_PATH.exists():
             DATAFILES_PATH.mkdir()
-    
+
     def create_logs(self):
         """Cria a pasta logs."""
         if not LOGS_PATH.exists():
@@ -69,4 +69,3 @@ class StartProject(BaseCommand):
         self.create_dot_env()
         self.create_datafiles()
         self.create_logs()
-

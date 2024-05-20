@@ -12,7 +12,7 @@ class Cli:
         """Inicializa a classe."""
         start_project = StartProject()
         start_project.handle()
-        
+
         self.commands = [StartProject, Run, Crypt]
 
     def get_parser(self):

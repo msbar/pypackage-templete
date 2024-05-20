@@ -8,7 +8,51 @@ theme:
 
 nav:
   - Descrição: index.md
-  
+  - API:
+    - Introdução: api/index.md
+    - apps:
+      - Introdução: api/apps/index.md
+      - cli: 
+        - cli: api/apps/cli/cli.md
+    - conf:
+      - Introdução: api/conf/index.md
+      - Settings: api/conf/settings.md
+      - templates:
+        - dotenv_template: api\conf\templates\dotenv_template.md
+    - core:
+      - Introdução: api/core/index.md
+      - Management:
+        - Base: api/core/management/base.md
+        - Commands:
+          - api/core/management/commands/crypton.md
+          - api/core/management/commands/run.md
+          - api/core/management/commands/start_project.md
+    - Queries:
+      - Introdução: api/queries/index.md
+    - Scripts:
+      - Introdução: api/scripts/index.md
+      - base: api/scripts/base.md
+    - Services:
+      - Introdução: api/services/index.md
+      - criptografia: 
+        - crypton: api/services/criptografia/crypton.md
+      - db:
+        - db: api/services/db/db.md
+    - utils:
+      - Introdução: api/utils/index.md
+      - cnpj: api/utils/cnpj.md
+      - converters: api/utils/converters.md
+      - cpf: api/utils/cpf.md
+      - pandas: api/utils/pandas.md
+    - validators:
+      - Introdução: api/validators/index.md
+      - base: api/validators/base.md
+      - cnpj_validator: api/validators/cnpj_validator.md
+      - cpf_validator: api/validators/cpf_validator.md
+
+    - main: api/main.md
+
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
